@@ -1,0 +1,35 @@
+@media only screen and (max-width: 600px) {
+  .calculator-container {
+    max-width: 100vh;
+    height: 90vh;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .calculator-container {
+    max-width: 45vw;
+    height: 90vh;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .calculator-container {
+    max-width: 30vw;
+    height: 80vh;
+  }
+}
+
+#page {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-container {
+  background-color: lightblue;
+  flex: 1 1 100%;
+
+  min-width: 400px;
+  min-height: 700px;
+}
