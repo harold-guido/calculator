@@ -40,9 +40,9 @@
   grid-template-areas:
     "display display display display"
     "keypad keypad keypad operations"
-    "keypad keypad kaypad operations"
-    "keypad keypad kaypad operations"
-    "keypad keypad kaypad operations";
+    "keypad keypad keypad operations"
+    "keypad keypad keypad operations"
+    "keypad keypad keypad operations";
 }
 
 .screen {
