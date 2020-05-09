@@ -32,4 +32,27 @@
 
   min-width: 400px;
   min-height: 700px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "display display display display"
+    "keypad keypad keypad operations"
+    "keypad keypad kaypad operations"
+    "keypad keypad kaypad operations"
+    "keypad keypad kaypad operations";
+}
+
+.screen {
+  grid-area: display;
+}
+
+.keypad {
+  grid-area: keypad;
+}
+
+.operations {
+  grid-area: operations;
 }
