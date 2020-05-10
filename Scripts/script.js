@@ -3,21 +3,9 @@ var numTwo = 0;
 
 // Operations Function
 
-const operations = (operator, numOne, numTwo) => {
-  var result = 0;
-  switch (operator) {
-    case "add":
-      result = numOne + numTwo;
-      break;
-    case "subtract":
-      result = numOne - numTwo;
-      break;
-    case "multiply":
-      result = numOne * numTwo;
-      break;
-    case "divide":
-      result = numOne / numTwo;
-      break;
-  }
-  return result;
+const operations = {
+  add: (a, b) => a + b,
+  min: (a, b) => a - b,
+  tim: (a, b) => a * b,
+  div: (a, b) => a / b,
 };
