@@ -1,11 +1,21 @@
 // Creating Number Button Divs
-const keypad = document.querySelector(".keypad");
 
+const keypad = document.querySelector(".keypad");
 for (let i = 0; i < 10; i++) {
+  // create divs
   let numButton = document.createElement("div");
+
+  // give divs class
   numButton.classList.add("numButton");
+  numButton.classList.add("button");
+
+  // give divs id
   numButton.id = "n" + i;
+
+  // give divs numbers
   numButton.textContent = i;
+
+  // adding divs to father
   keypad.appendChild(numButton);
 }
 

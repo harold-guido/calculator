@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 @media only screen and (max-width: 600px) {
   .calculator-container {
     max-width: 100vh;
@@ -27,17 +29,20 @@
 }
 
 .calculator-container {
-  background-color: lightblue;
+  background-color: #d4d4d4;
   flex: 1 1 100%;
 
   min-width: 400px;
   min-height: 700px;
 
   border-radius: 23px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #8f8f8f;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.5fr repeat(4, 1fr);
 
   grid-template-areas:
     "display display display display"
@@ -51,10 +56,19 @@
 
 .screen {
   grid-area: display;
-  background-color: grey;
+  background-color: #8f8f8f;
 
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 23px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #8f8f8f;
+
+  text-align: end;
+  padding-right: 10px;
+
+  font-size: 300%;
+  font-family: "Roboto", sans-serif;
 }
 
 .keypad {
@@ -63,17 +77,25 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "n7 n8 n9" "n4 n5 n6" "n1 n2 n3" ". n0 .";
+  grid-template-areas:
+    "n7 n8 n9"
+    "n4 n5 n6"
+    "n1 n2 n3"
+    ". n0 .";
 
   margin-left: 5px;
 }
 
 .numButton {
-  font-size: 6vw;
+  font-family: "Roboto", sans-serif;
+  font-size: 5vw;
   text-align: center;
 
-  background-color: grey;
-  border-radius: 15px;
+  background-color: #8f8f8f;
+  border-radius: 23px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #8f8f8f;
   margin: 5px;
 }
 
@@ -110,4 +132,39 @@
 
 .operations {
   grid-area: operations;
+
+  margin-left: 10px;
+
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+}
+.operation {
+  margin: 5px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+
+  background-color: #494848;
+  border-radius: 23px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #494848;
+  margin: 5px;
+}
+
+.special-operation {
+  background-color: #62809c;
+  border-color: #62809c;
+}
+
+.button:hover {
+  border-color: #777777;
+  background-color: #777777;
+}
+
+.special-operation:hover {
+  border-color: #89a7bf;
+  background-color: #89a7bf;
 }
