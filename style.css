@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-@media only screen and (max-width: 600px) {
-  .calculator-container {
-    max-width: 100vh;
-    height: 90vh;
-  }
-}
-@media only screen and (min-width: 600px) {
-  .calculator-container {
-    max-width: 45vw;
-    height: 90vh;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .calculator-container {
-    max-width: 30vw;
-    height: 70vh;
-  }
-}
-
 #page {
   width: 100vw;
   height: 100vh;
@@ -29,6 +10,9 @@
 }
 
 .calculator-container {
+  max-width: 30vw;
+  height: 70vh;
+
   background-color: #d4d4d4;
   flex: 1 1 100%;
 
@@ -60,7 +44,7 @@
 
   margin: 10px;
   border-radius: 23px;
-  border-width: 8px;
+  border-width: 4px;
   border-style: solid;
   border-color: #8f8f8f;
 
@@ -88,7 +72,7 @@
 
 .numButton {
   font-family: "Roboto", sans-serif;
-  font-size: 5vw;
+  font-size: 80px;
   text-align: center;
 
   background-color: #8f8f8f;
@@ -142,7 +126,7 @@
   margin: 5px;
 
   font-family: "Roboto", sans-serif;
-  font-size: 3vw;
+  font-size: 40px;
   text-align: center;
   color: white;
 

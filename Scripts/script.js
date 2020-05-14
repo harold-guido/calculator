@@ -1,23 +1,20 @@
-// Creating Number Button Divs
+// Giving  numButtons functionality
 
-const keypad = document.querySelector(".keypad");
-for (let i = 0; i < 10; i++) {
-  // create divs
-  let numButton = document.createElement("div");
-
-  // give divs class
-  numButton.classList.add("numButton");
-  numButton.classList.add("button");
-
-  // give divs id
-  numButton.id = "n" + i;
-
-  // give divs numbers
-  numButton.textContent = i;
-
-  // adding divs to father
-  keypad.appendChild(numButton);
+for (i = 0; i < 10; i++) {
+  numButton = document.getElementById("n" + i);
+  numButton.onclick = (item) => {
+    screenContent = document.querySelector(".screen");
+    screenContent.textContent =
+      screenContent.textContent + item.target.textContent;
+  };
 }
+
+// Giving reset button functionality
+
+resetButton = document.getElementById("reset");
+resetButton.onclick = () => {
+  document.querySelector(".screen").textContent = "";
+};
 
 // Operations Function
 
