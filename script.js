@@ -2,7 +2,7 @@
 
 let resetButton = document.getElementById("reset");
 resetButton.addEventListener("click", () => {
-  document.querySelector(".screen").textContent = "0";
+  document.querySelector(".screen").textContent = "";
   operationCounter = 0;
   storedValues = {};
 });
@@ -10,12 +10,11 @@ resetButton.addEventListener("click", () => {
 // Operations Function
 
 const operations = {
-  add: (a, b) => a + b,
-  min: (a, b) => a - b,
-  tim: (a, b) => a * b,
-  div: (a, b) => a / b,
-  equal: (a, b) => b,
-  reset: (a, b) => "",
+  add: (a, b) => Math.round((a + b) * 100000) / 100000,
+  min: (a, b) => Math.round((a - b) * 100000) / 100000,
+  tim: (a, b) => Math.round(a * b * 100000) / 100000,
+  div: (a, b) => Math.round((a / b) * 100000) / 100000,
+  equal: (a, b) => (Math.round(b) * 100000) / 100000,
 };
 
 const operate = (operation, num1, num2) => {
