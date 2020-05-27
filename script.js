@@ -17,7 +17,7 @@ for (i = 0; i < 10; i++) {
     if (operating == true) {
       screenContent.textContent = number.target.textContent;
       operating = false;
-    } else {
+    } else if (screenContent.textContent.length < 13) {
       screenContent.textContent += number.target.textContent;
     }
   };
@@ -56,6 +56,10 @@ const operations = {
 };
 
 const operate = (operation, num1, num2) => {
+  if (operation == "div" && num2 == 0) {
+    resetButton.click();
+    return "Naughty Naughty";
+  }
   result = operations[operation](Number(num1), Number(num2)).toString();
   if (result.length > 13) {
     return Number(result).toExponential(6);
