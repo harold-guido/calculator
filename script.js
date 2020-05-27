@@ -26,7 +26,7 @@ for (i = 0; i < 10; i++) {
 let dotButton = document.getElementById("dot");
 dotButton.onclick = (dot) => {
   let screenContent = document.querySelector(".screen");
-  if (operating != true) {
+  if (operating != true && !screenContent.textContent.includes(".")) {
     screenContent.textContent += dot.target.textContent;
   }
 };
