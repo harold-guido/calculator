@@ -56,7 +56,11 @@ const operations = {
 };
 
 const operate = (operation, num1, num2) => {
-  return operations[operation](Number(num1), Number(num2)).toString();
+  result = operations[operation](Number(num1), Number(num2)).toString();
+  if (result.length > 13) {
+    return Number(result).toExponential(6);
+  }
+  return result;
 };
 
 operationButtons.forEach((operation) => {
