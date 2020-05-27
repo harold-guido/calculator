@@ -5,6 +5,7 @@ resetButton.addEventListener("click", () => {
   document.querySelector(".screen").textContent = "";
   operationCounter = 0;
   storedValues = {};
+  operating = true;
 });
 
 // Operations Function
@@ -23,7 +24,7 @@ const operate = (operation, num1, num2) => {
 
 let operationCounter = 0;
 let storedValues = {};
-let operating = false;
+let operating = true;
 
 let operationButtons = document.querySelectorAll(".operation");
 
@@ -72,6 +73,16 @@ for (i = 0; i < 10; i++) {
     }
   };
 }
+
+let dotButton = document.getElementById("dot");
+let backSpace = document.getElementById("backspace");
+
+dotButton.onclick = (dot) => {
+  let screenContent = document.querySelector(".screen");
+  if (operating != true) {
+    screenContent.textContent += dot.target.textContent;
+  }
+};
 // wiring buttons to script
 
 // let plusop = document.querySelector("#add");
